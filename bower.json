@@ -1,0 +1,21 @@
+{
+  "name": "letterpress",
+  "version": "0.0.1",
+  "authors": [
+    "Phil Adams <philadams.net@gmail.com>"
+  ],
+  "main": "writings.css",
+  "license": "MIT",
+  "homepage": "https://github.com/philadams/letterpress",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "normalize-css": "~3.0.1"
+  }
+}
