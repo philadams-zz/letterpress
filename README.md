@@ -19,7 +19,11 @@ installation
 This project depends on bower (a node package) and pandoc (a Haskell package).
 Tasks are called using shovel, a Python Make.  If you want PDF generation,
 you'll also need a TeX library. If you've got these already, then simply run
-`bower install letterpress`. Done.
+
+    git clone https://github.com/philadams/letterpress.git
+    pip install -r requirements.txt
+    bower install
+
 
 installing all the dependencies
 -------------------------------
@@ -43,4 +47,4 @@ Last, shovel:
     brew install pip
     pip install shovel
 
-And then just `bower install letterpress`. Done.
+And then follow the short installation instructions above.
