@@ -4,7 +4,11 @@ letterpress
 Given a nicely written document in pandoc markdown, output a pretty HTML
 document. Complete with bibtex-based references and a mobile-first stylesheet.
 
+To create `./gen` with all the necessary html and css files, ready for upload:
+
 `shovel html sample`
+
+![Sample HTML output](./sample-out.png)
 
 Uses pandoc, normalize.css, bootstrap 3.x, shovel. CSL sheets are available at
 https://github.com/citation-style-language/styles.
