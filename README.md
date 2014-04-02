@@ -48,3 +48,13 @@ Last, shovel:
     pip install shovel
 
 And then follow the short installation instructions above.
+
+Please note: if you get stuck installing things on Ubuntu, it's probably a
+packaging error. A common issue surrounds the packaging of pandoc on Ubuntu and
+installing pandoc from apt instead of using Haskell's cabal. You can fix it by
+following directions at http://johnmacfarlane.net/pandoc/faqs.html.
+
+future
+------
+
+- consider moving references to csl/json format (removing need for bibtex)
