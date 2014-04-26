@@ -22,7 +22,9 @@ def html(doc=None):
         os.makedirs('./gen/css')
     for f in os.listdir('./css'):
         shutil.copy('./css/' + f, './gen/css')
-    cmd = 'pandoc -s -S --biblio={0}.bib --csl={1} --from=markdown --to=html5 --template=./template-html5-bootstrap.html --section-divs --toc --css=./css/normalize.css --css=./css/bootstrap.min.css --css=./css/letterpress.css -o ./gen/{2}.html ./content/{2}.md'
-    r = envoy.run(cmd.format(doc, CSL, doc))
+    cmd = 'pandoc -s -S --biblio=./content/{0}.bib --csl={1} --from=markdown --to=html5 --template=./template-html5-bootstrap.html --section-divs --toc --toc-depth=2 --css=./css/normalize.css --css=./css/bootstrap.min.css --css=./css/letterpress.css -o ./gen/{2}.html ./content/{2}.md'
+    cmdr = cmd.format(doc, CSL, doc)
+    print(cmdr)
+    r = envoy.run(cmdr)
     #r = envoy.run('open {0}.html'.format(FNAME))
     print(r.status_code)
