@@ -1,4 +1,9 @@
+# for html prettification
 bower_components/*
-gen/*
+
+# source files
 content/*
 img
+
+# output
+gen/*
