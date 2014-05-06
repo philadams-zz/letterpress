@@ -3,8 +3,8 @@ CFLAGS = -Wall -c $(DEBUG)
 SRC = 'proposal'
 
 html: prep-gen
-	cp -r ./css ./gen/css
-	cp -r ./img ./gen/img
+	cp -r ./css ./gen/
+	cp -r ./img ./gen/
 	pandoc -s -S ./content/${SRC}.md\
 	  --biblio=./content/${SRC}.bib\
 	  --csl=./acm-sigchi-proceedings.csl\
@@ -28,6 +28,7 @@ pdf: prep-gen
 	pandoc ./content/${SRC}.md\
 	  --biblio=./content/${SRC}.bib\
 	  --csl=./acm-sigchi-proceedings.csl\
+	  --latex-engine=xelatex\
 	  -o gen/${SRC}.pdf
 
 prep-gen:
