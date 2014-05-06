@@ -59,8 +59,13 @@ section p {
 section section {
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Palatino Linotype";
+}
+figure img {
+  max-width: 240px;
+  max-height: 240px;
 }
 
 /* =references */
