@@ -18,6 +18,12 @@ html: prep-gen
 	  --css=./css/letterpress.css\
 	  -o gen/${SRC}.html
 
+docx: prep-gen
+	pandoc ./content/${SRC}.md\
+	  --biblio=./content/${SRC}.bib\
+	  --csl=./acm-sigchi-proceedings.csl\
+	  -o gen/${SRC}.docx
+
 pdf: prep-gen
 	pandoc ./content/${SRC}.md\
 	  --biblio=./content/${SRC}.bib\
