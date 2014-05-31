@@ -25,11 +25,22 @@ docx: prep-gen
 	  -o gen/${SRC}.docx
 
 pdf: prep-gen
+ifneq (,$(wildcard ./content/${SRC}-appendix.md))
+	pandoc ./content/${SRC}-appendix.md\
+	  -o gen/${SRC}-appendix.tex
+	pandoc ./content/${SRC}.md\
+	  --biblio=./content/${SRC}.bib\
+	  --csl=./acm-sigchi-proceedings.csl\
+	  --latex-engine=xelatex\
+	  --include-after-body=./gen/${SRC}-appendix.tex\
+	  -o gen/${SRC}.pdf
+else
 	pandoc ./content/${SRC}.md\
 	  --biblio=./content/${SRC}.bib\
 	  --csl=./acm-sigchi-proceedings.csl\
 	  --latex-engine=xelatex\
 	  -o gen/${SRC}.pdf
+endif
 
 prep-gen:
 	mkdir -p ./gen
